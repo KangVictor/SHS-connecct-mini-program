@@ -1,8 +1,11 @@
 <!--pages/clubs/clubs.wxml-->
 <text>pages/clubs/clubs.wxml</text>
 <text>\n\n//TODO Clubs exploration page:
+  - search page w/ filter (grade, type)
   - list of clubs
-  - another access to my clubs
+  - another place to access "my clubs"
+  - each club in small banner/card form (wide, short picture w/ or w/o name)
+  - if club does not have banner use plain text instead
   - explore clubs, create and join
     eg. put put an "+ new club" entry under my clubs</text>
 <view>

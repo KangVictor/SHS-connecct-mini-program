@@ -1,5 +1,16 @@
 <!--pages/clubs/clubinfo/clubinfo.wxml-->
 <text>pages/clubs/clubinfo/clubinfo.wxml</text>
-<form class='newclubform'>
-    <input type='text' placeholder='Club Name'/>
-</form>
+<text>\n\n //TODO each club will have a page that looks something like this
+
+what to display:
+  - club names
+  - contact info
+  - member count (tap to view members)
+  - activities
+  - if not joined then join button
+
+for club leaders(//TODO &admins):
+  - set club as inactive
+  - remove member
+  - club profile edit (change leader, manage members)
+  - (club join requests)</text>

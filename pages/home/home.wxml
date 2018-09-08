@@ -1,5 +1,7 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
 <text> \n\n//TODO Homepage:
+  - my account (total CAS hrs, name, phone, avatar, my clubs, etc...)
   - featured/excellent clubs
-  - my account (total CAS hrs, name, phone, avatar, etc...)</text>
+
+  - clubs exist in card form (image with club name, tap to enter club page where more club info is showed)</text>
