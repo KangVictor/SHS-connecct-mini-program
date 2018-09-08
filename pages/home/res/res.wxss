@@ -1,0 +1,7 @@
+/* pages/home/res/res.wxss */
+.textarea {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    padding-left: 10px;
+    padding-top: 10px;
+}

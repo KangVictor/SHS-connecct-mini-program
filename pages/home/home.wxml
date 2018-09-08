@@ -5,3 +5,5 @@
   - featured/excellent clubs
 
   - clubs exist in card form (image with club name, tap to enter club page where more club info is showed)</text>
+
+<button type='primary' bindtap='openhelp'>UI Development Resources</button>
