@@ -1,1 +1,7 @@
 /* pages/clubs/clubinfo/clubinfo.wxss */
+
+.newclubform .input{
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    margin-left: 60rpx;
+}

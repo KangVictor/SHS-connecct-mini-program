@@ -1,2 +1,5 @@
 <!--pages/clubs/clubinfo/clubinfo.wxml-->
 <text>pages/clubs/clubinfo/clubinfo.wxml</text>
+<form class='newclubform'>
+    <input type='text' placeholder='Club Name'/>
+</form>
