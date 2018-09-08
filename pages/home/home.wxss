@@ -1,0 +1,9 @@
+/* pages/home/home.wxss */
+
+.home {
+    border-top: 10px;
+}
+
+.user-info {
+    align-content: center;
+}

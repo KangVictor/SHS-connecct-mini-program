@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/clubs/clubs",
+        "pages/regs/regs",
+        "pages/clubs/clubinfo/clubinfo"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#2C2C2C",
+        "navigationBarTitleText": "Connect",
+        "navigationBarTextStyle": "White"
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "iconPath": "/resources/placeholder.png",
+                "selectedIconPath": "resources/placeholder.png",
+                "text": "Home"
+            },
+            {
+                "pagePath": "pages/clubs/clubs",
+                "iconPath": "/resources/placeholder.png",
+                "selectedIconPath": "resources/placeholder.png",
+                "text": "Clubs"
+            },
+            {
+                "pagePath": "pages/regs/regs",
+                "iconPath": "/resources/placeholder.png",
+                "selectedIconPath": "resources/placeholder.png",
+                "text": "Reservations"
+            }
+        ]
+    }
+}
