@@ -8,6 +8,8 @@
 - For `App ID` choose the Mini Program test account in the words beneath the input box
 - For `Name` anything, preferably SHSIDConnect
 
-#### To preview, simply click the preview button in the upper bar of the IDE
+#### Preview on phone
+Simply click the preview button in the upper bar of the IDE and the instructions should be sufficient
 
-### Git integration: yea don't worry about that now, just send code in groupchat
+#### Git integration
+Yea don't worry about that now, just send code in groupchat
