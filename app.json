@@ -4,7 +4,8 @@
         "pages/clubs/clubs",
         "pages/regs/regs",
         "pages/clubs/clubinfo/clubinfo",
-        "pages/home/res/res"
+        "pages/home/res/res",
+        "pages/test"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -14,26 +15,26 @@
     },
     "tabBar": {
         "color": "#7A7E83",
-        "selectedColor": "#3cc51f",
+        "selectedColor": "#ffac3a",
         "borderStyle": "black",
         "backgroundColor": "#ffffff",
         "list": [
             {
                 "pagePath": "pages/home/home",
-                "iconPath": "/resources/placeholder.png",
-                "selectedIconPath": "resources/placeholder.png",
+                "iconPath": "/resources/mp home.png",
+                "selectedIconPath": "resources/mp homeS.png",
                 "text": "Home"
             },
             {
                 "pagePath": "pages/clubs/clubs",
-                "iconPath": "/resources/placeholder.png",
-                "selectedIconPath": "resources/placeholder.png",
+                "iconPath": "/resources/mp clubs.png",
+                "selectedIconPath": "resources/mp clubsS.png",
                 "text": "Clubs"
             },
             {
                 "pagePath": "pages/regs/regs",
-                "iconPath": "/resources/placeholder.png",
-                "selectedIconPath": "resources/placeholder.png",
+                "iconPath": "/resources/mp reservations.png",
+                "selectedIconPath": "resources/mp reservationsS.png",
                 "text": "Reservations"
             }
         ]

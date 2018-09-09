@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "Clubs"
+    "navigationBarTitleText": "Clubs",
+    "usingComponents": {
+        "clubcard": "clubcard/clubcard"
+    }
 }

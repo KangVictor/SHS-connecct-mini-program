@@ -1,10 +1,12 @@
 <!--pages/home/res/res.wxml-->
 <text>pages/home/res/res.wxml</text>
-<text>\n\nWEUI UI concept page</text>
-<textarea class='textarea' value='https://weui.io/' />
-<text>UI Components</text>
-<textarea class='textarea' value='https://developers.weixin.qq.com/miniprogram/dev/component/' />
-<text>WEUI UI standards</text>
-<textarea class='textarea' value='https://developers.weixin.qq.com/miniprogram/design/index.html?t=18090718' />
-<text>Google Material Design</text>
-<textarea class='textarea' value='https://material.io/' />
+<view class='info'>
+    <text>\n\nWEUI UI concept page</text>
+    <textarea value='https://weui.io/' />
+    <text>UI Components</text>
+    <textarea value='https://developers.weixin.qq.com/miniprogram/dev/component/' />
+    <text>WEUI UI standards</text>
+    <textarea value='https://developers.weixin.qq.com/miniprogram/design/index.html?t=18090718' />
+    <text>Google Material Design</text>
+    <textarea value='https://material.io/' />
+</view>

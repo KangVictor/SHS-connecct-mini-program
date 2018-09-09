@@ -1,0 +1,6 @@
+<view style="width: {{width}}; height: {{height}}">
+    <navigator open-type='navigate' url="{{url}}" class='cardbase' hover-class='cardbase-hover'>
+        <image class='backimage' src='{{imagesrc}}'/>
+        <text class='clubname' style="color: {{textcolor}}">example club</text>
+    </navigator>
+</view>

@@ -1,7 +1,15 @@
 /* pages/home/res/res.wxss */
-.textarea {
+.info textarea {
     background-color: #2C2C2C;
     color: #FFFFFF;
     padding-left: 10px;
     padding-top: 10px;
+    height: 80px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    width: auto;
+}
+
+.info text{
+    margin: 15px, 0px, 8px, 5px;
 }
