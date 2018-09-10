@@ -5,7 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      images: [
+          '/resources/clubdefault.png',
+          '/resources/mp clubs.png'
+      ],
+      icon: '/resources/mp homeS.png',
+      joinbutton: false,
+      managebutton: false,
+      info: { 
+          active: true,
+          leader: 'Blyatman',
+          loc: 'XMT rooftop',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu posuere turpis, et elementum tellus. Cras a nunc et elit cursus aliquet sit amet a est. Integer sit amet diam eu nunc sagittis maximus eu eget lacus. Donec accumsan tristique neque, vitae condimentum risus euismod sed. Pellentesque tristique turpis a interdum scelerisque. Aenean ut tellus et dui vestibulum imperdiet. Ut imperdiet interdum augue non ullamcorper. Ut ligula tortor, volutpat in ornare quis, fringilla vel diam. In suscipit sapien semper libero facilisis pellentesque. Phasellus arcu orci, pretium vel lectus ultrices, ultrices tincidunt ex.'
+      }
   },
 
   /**
