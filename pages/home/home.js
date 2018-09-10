@@ -1,12 +1,18 @@
+var SCDATA = {
+  CAS_HOUR: '1',
+  NAME:"A",
+  PHONE:"111"
+}
+
 // pages/home/home.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
+
+  data: SCDATA,
   
-  },
 
   /**
    * 生命周期函数--监听页面加载
