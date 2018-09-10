@@ -1,5 +1,9 @@
 <!--pages/home/home.wxml-->
+
 <text>pages/home/home.wxml</text>
+
+<text>\n Name:</text>
+
 <text> \n\n//TODO Homepage:
   - my account (total CAS hrs, name, phone, avatar, my clubs, etc...)
   - featured/excellent clubs
