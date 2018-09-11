@@ -1,0 +1,9 @@
+<!--
+  text: String
+-->
+<template name='info'>
+    <view style='position:absolute; left:50%; top:50%; margin-left: -200rpx; margin-top:-400rpx; width:400rpx; height: 400rpx;'>
+        <image src='/resources/iconinfo.png' style='position:absolute; left:50%;; margin-left: -150rpx;width: 300rpx; height: 300rpx;' />
+        <view style='position:absolute; margin-left:auto;margin-right:auto;text-align:center; bottom:10rpx'>Currently Unavaliable</view>
+    </view>
+</template>

@@ -1,78 +1,70 @@
 // pages/clubs/clubinfo/clubinfo.js
+class clubinfo {
+    static defaultdes = "Lorem ipsum...... The club and its contents are currently loading... please wait...";
+}
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-      images: [
-          '/resources/clubdefault.png',
-          '/resources/mp clubs.png'
-      ],
-      icon: '/resources/mp homeS.png',
-      joinbutton: false,
-      managebutton: false,
-      info: { 
-          active: true,
-          leader: 'Blyatman',
-          loc: 'XMT rooftop',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu posuere turpis, et elementum tellus. Cras a nunc et elit cursus aliquet sit amet a est. Integer sit amet diam eu nunc sagittis maximus eu eget lacus. Donec accumsan tristique neque, vitae condimentum risus euismod sed. Pellentesque tristique turpis a interdum scelerisque. Aenean ut tellus et dui vestibulum imperdiet. Ut imperdiet interdum augue non ullamcorper. Ut ligula tortor, volutpat in ornare quis, fringilla vel diam. In suscipit sapien semper libero facilisis pellentesque. Phasellus arcu orci, pretium vel lectus ultrices, ultrices tincidunt ex.'
-      }
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        images: [
+            '/resources/clubdefault.png'
+        ],
+        icon: '/resources/clubdefault.png',
+        join: {
+            allow: true,
+            loading: false
+        },
+        manage: false,
+        clubid: -1,
+        info: {
+            active: false,
+            clubname: 'Loading...',
+            leader: 'DJ Blyatman',
+            loc: 'XMT roof-top',
+            description: clubinfo.defaultdes
+        }
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function(options) {
+        wx.showNavigationBarLoading();
+        if(options.id && (options.id > 0)){
+            var clubid = options.id;
+            this.setData({
+                "clubid": clubid,
+                'info.description': 'You accessed this club via a share, club id is: '+clubid
+            });
+        } else {
+            wx.showModal({
+                title: 'Unknown Club',
+                content: 'You find yourself lost in the maze of clubs. Quivering, you took a step back',
+                showCancel: false,
+                complete: function(res){
+                    wx.navigateBack({
+                        delta: 1
+                    })
+                }
+            })
+        }
+    },
+    onShareAppMessage(property) {
+        return {
+            title: this.data.info.clubname,
+            path: 'pages/home/home?clubid='+this.data.clubid,
+            imageUrl: this.data.icon
+        }
+    },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    joinClub: function() {
+        joinbtn.loading
+    },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+    manageClub: function() {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    }
 })

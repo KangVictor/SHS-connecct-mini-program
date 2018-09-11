@@ -3,9 +3,9 @@
         "pages/home/home",
         "pages/clubs/clubs",
         "pages/regs/regs",
-        "pages/clubs/clubinfo/clubinfo",
         "pages/home/res/res",
-        "pages/test"
+        "pages/clubs/clubinfo/clubinfo",
+        "pages/clubs/clubinfo/activity/activity"
     ],
     "window": {
         "backgroundTextStyle": "light",

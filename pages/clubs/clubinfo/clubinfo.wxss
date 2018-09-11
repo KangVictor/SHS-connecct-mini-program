@@ -6,7 +6,7 @@
 
 .banner {
     width: auto;
-    height: 200px;
+    height: 400rpx;
 }
 
 .content {
@@ -14,28 +14,29 @@
     width: 100%;
     position: absolute;
     background: white;
-    box-shadow: 0px 0px 100px black;
+    box-shadow: 0rpx 0rpx 100rpx black;
 }
 .icon{
-    height: 60px;
-    width: 60px;
+    height: 120rpx;
+    width: 120rpx;
     z-index: 3;
     position: absolute;
-    top: -30px;
+    top: -60rpx;
     left: 10%;
     border-radius: 50%;
-    box-shadow: 2px 2px 10px #555;
+    box-shadow: 4rpx 4rpx 20rpx #555;
 }
 .clubname{
-    margin-top: 43px;
-    margin-left: 20px;
+    margin-top: 86rpx;
+    margin-left: 40rpx;
     font-size: 20pt;
     color: #353535;
 }
+
 .extraoptsbtn{
     position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 60rpx;
+    right: 40rpx;
     height: 50px;
     width: 100px;
 }
@@ -43,22 +44,22 @@
 .hr{
     content: "";
     width: 90%;
-    height: 1px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    height: 1rpx;
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 2px solid rgba(180, 180, 180, 0.3);
 }
 .description {
-    margin: 0px 20px 8px 20px;
+    margin: 0px 40rpx 16rpx 40rpx;
     width: auto;
     font-size: 14pt;
     color: #888;
 }
 
 .info {
-    margin: 0px 20px 3px 20px;
+    margin: 0px 40rpx 6rpx 40rpx;
     width: auto;
     font-size: 14pt;
 }
@@ -73,4 +74,9 @@
 }
 .info .inactive {
     color: #b22;
+}
+
+.navtab {
+    margin: 0px 40rpx 6rpx 40rpx;
+    width: auto;
 }

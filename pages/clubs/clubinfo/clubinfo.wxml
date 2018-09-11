@@ -9,11 +9,16 @@
         </swiper>
         <view class='content'>
             <image class='icon' src='{{icon}}' />
-            <view class='clubname'>Sample club</view>
-            <button wx:if='{{joinbutton}}' type='primary' class='extraoptsbtn'>Join</button>
-            <button wx:elif='{{managebutton}}' type='primary' class='extraoptsbtn'>Manage</button>
-            <button wx:else type='primary' disabled='true' class='extraoptsbtn'>Joined</button>
+            <!--Club Actions-->
+            <view>
+                <view class='clubname'>{{info.clubname}}</view>
+                <button wx:if='{{!info.active}}' type='default' class='extraoptsbtn' disabled='true'>Inactive</button>
+                <button wx:elif='{{join.allow}}' type='primary' plain='true' class='extraoptsbtn' loading='{{join.loading}}' bindtap='joinclub'>Join</button>
+                <button wx:elif='{{manage}}' type='primary' plain='true' class='extraoptsbtn' bindtap='manageclub'>Manage</button>
+            </view>
+
             <view class='hr' />
+
             <view class='info'>
                 <text class='key'>Status: </text>
                 <text wx:if='{{info.active}}' class='active'>Active</text>
@@ -24,10 +29,14 @@
                 <text class='key'>Location:  </text>
                 <text class='value'>{{info.loc}}</text>
             </view>
+
             <view class='hr' />
+
             <view class='description'>
                 <text>{{info.description}}</text>
             </view>
+
+            <navtab class='navtab' text='Activities' url='activity/activity?id={{clubid}}'/>
         </view>
     </view>
 </view>
@@ -35,16 +44,14 @@
 
 
 <!--
-
-
 //TODO each club will have a page that looks something like this
 
 what to display:
-  - club names
-  - contact info
+  - #club names
+  - #contact info
   - member count (tap to view members)
   - activities
-  - if not joined then join button
+  - #if not joined then join button
 
 for club leaders(//TODO &admins):
   - set club as inactive

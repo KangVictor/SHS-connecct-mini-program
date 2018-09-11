@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "Club Info"
+    "navigationBarTitleText": "Club Info",
+    "usingComponents": {
+        "navtab": "/pages/navtab/navtab"
+    }
 }

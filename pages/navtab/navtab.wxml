@@ -1,0 +1,7 @@
+<!--pages/navtab/navtab.wxml-->
+<view class='hr' />
+<navigator url="{{url}}" class='navigator'>
+    <view class='navigator-text'>{{text}}</view>
+    <view class='navigator-arrow' />
+</navigator>
+<view class='hr' />
