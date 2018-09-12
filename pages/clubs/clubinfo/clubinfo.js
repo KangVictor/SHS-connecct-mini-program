@@ -33,16 +33,26 @@ Page({
      */
     onLoad: function(options) {
         wx.showNavigationBarLoading();
+        if(options.id) {
+            wx.setNavigationBarTitle({
+                title: options.id,
+            })
+        }
         if(options.id && (options.id > 0)){
             var clubid = options.id;
             this.setData({
                 "clubid": clubid,
                 'info.description': 'You accessed this club via a share, club id is: '+clubid
             });
+        } else if(options.id == -1){
+            wx.showModal({
+                title: 'You are happy',
+                content: 'yes indeed you are very gay',
+            })
         } else {
             wx.showModal({
                 title: 'Unknown Club',
-                content: 'You find yourself lost in the maze of clubs. Quivering, you took a step back',
+                content: 'You find yourself lost in the puzzle of clubs. Quivering, you took a step back',
                 showCancel: false,
                 complete: function(res){
                     wx.navigateBack({
@@ -61,7 +71,6 @@ Page({
     },
 
     joinClub: function() {
-        joinbtn.loading
     },
 
     manageClub: function() {

@@ -1,0 +1,22 @@
+{
+    "userid": -1,
+    "realname": "realname",
+    "nickname": "root",
+    "activenotifications": [
+        {
+            "clubname": "sampleclub(id or name)",
+            "notifications": {
+                "content": "notif",
+                "time": "8012"
+            }
+        },
+        {
+            "clubname2": "same"
+        }
+    ],
+    "myclubs": [
+        -1,
+        0,
+        1
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "cards": [
+        {
+            "clubid": -1,
+            "logo": "logourl",
+            "name": "sampleurl",
+            "data": "backup"
+        },
+        {
+            "clubid": 0,
+            "logo": "logourl2",
+            "name": "sampleurl2",
+            "data": "backup"
+        }
+    ]
+}

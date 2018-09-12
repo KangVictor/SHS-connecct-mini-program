@@ -10,9 +10,9 @@
     eg. put put an "+ new club" entry under my clubs</text>
 <view>
     <text>\n</text>
-    <button type='primary' plain='true' bindtap='newclubtap'>demo new club</button>
     <text>Sample club card (for displaying clubs): </text>
     <view style='margin: 10px 25px 0px 25px; height:100px; width:300px;'>
-        <clubcard/>
+        <clubcard cid='200' imagesrc='/resources/mp home.png'
+        weburl='https://connect.shs.cn/'/>
     </view>
 </view>

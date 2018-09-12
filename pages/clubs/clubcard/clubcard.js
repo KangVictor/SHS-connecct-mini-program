@@ -20,22 +20,10 @@ Component({
             type: String,
             value: '#ffffff'
         },
-        url: {
+        cid: Number,
+        name: {
             type: String,
-            value: '/pages/clubs/clubinfo/clubinfo?clubid=null'
+            value: 'Unknown Club'
         }
-    },
-
-    /**
-     * Component initial data
-     */
-    data: {
-
-    },
-
-    /**
-     * Component methods
-     */
-    methods: {
     }
 })

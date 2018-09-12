@@ -26,8 +26,10 @@
                 <text>\n</text>
                 <text class='key'>Leader:  </text>
                 <text class='value'>{{info.leader}}\n</text>
-                <text class='key'>Location:  </text>
-                <text class='value'>{{info.loc}}</text>
+                <view wx:if='{{info.loc}}'>
+                    <text class='key'>Location:  </text>
+                    <text class='value'>{{info.loc}}</text>
+                </view>
             </view>
 
             <view class='hr' />
@@ -36,7 +38,7 @@
                 <text>{{info.description}}</text>
             </view>
 
-            <navtab class='navtab' text='Activities' url='activity/activity?id={{clubid}}'/>
+            <navtab class='navtab' text='Activities' url='activity/activity?id={{clubid}}' />
         </view>
     </view>
 </view>
