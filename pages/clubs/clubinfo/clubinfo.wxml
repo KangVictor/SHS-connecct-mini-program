@@ -38,7 +38,8 @@
                 <text>{{info.description}}</text>
             </view>
 
-            <navtab class='navtab' text='Activities' url='activity/activity?id={{clubid}}' />
+            <navtab class='navtab' text='Activities' url='activity/activity?id={{clubid}}'/>
+            <navtab class='navtab' hidetop='true' text='Members'  url='members/members?id={{clubid}}' subtitle='{{info.members}}'  />
         </view>
     </view>
 </view>

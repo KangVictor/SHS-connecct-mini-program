@@ -1,4 +1,4 @@
-<!--pages/clubs/clubs.wxml-->
+<!--pages/clubs/clubs.wxml
 <text>pages/clubs/clubs.wxml</text>
 <text>\n\n//TODO Clubs exploration page:
   - search page w/ filter (grade, type)
@@ -7,12 +7,11 @@
   - each club in small banner/card form (wide, short picture w/ or w/o name)
   - if club does not have banner use plain text instead
   - explore clubs, create and join
-    eg. put put an "+ new club" entry under my clubs</text>
+    eg. put put an "+ new club" entry under my clubs</text>-->
 <view>
     <text>\n</text>
     <text>Sample club card (for displaying clubs): </text>
-    <view style='margin: 10px 25px 0px 25px; height:100px; width:300px;'>
-        <clubcard cid='200' imagesrc='/resources/mp home.png'
-        weburl='https://connect.shs.cn/'/>
+    <view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
+        <clubcard cid='{{item.id}}' imagesrc='{{item.logo}}' name='{{item.name}}'/>
     </view>
 </view>

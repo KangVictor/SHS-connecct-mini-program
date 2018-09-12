@@ -9,8 +9,9 @@
         "active": false,
         "clubname": "name",
         "leader": "12(7), DJ Blyatman",
-        "location": null,
-        "description": "advanceddesc"
+        "loc": null,
+        "description": "advanceddesc",
+        "members": 8
     },
     "activities": "empty right now"
 }

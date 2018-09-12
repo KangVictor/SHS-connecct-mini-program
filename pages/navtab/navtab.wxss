@@ -1,8 +1,10 @@
 /* pages/navtab/navtab.wxss */
 
 .navigator-arrow {
-    padding-right: 26rpx;
+    padding-right: 50rpx;
     position: relative;
+    color: #888;
+    text-align: right;
 }
 
 .navigator-arrow:after {

@@ -11,7 +11,11 @@ Component({
       text: {
           type: String,
           value: 'Action'
-      }
+      },
+      hidetop: Boolean,
+      hidebottom: Boolean,
+      tab: Boolean,
+      subtitle: String
   },
 
   /**

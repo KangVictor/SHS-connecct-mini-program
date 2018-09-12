@@ -9,23 +9,24 @@ Page({
      * 页面的初始数据
      */
     data: {
+        clubid: -1,
+        icon: '/resources/clubdefault.png',
         images: [
             '/resources/clubdefault.png'
         ],
-        icon: '/resources/clubdefault.png',
-        join: {
-            allow: true,
-            loading: false
-        },
-        manage: false,
-        clubid: -1,
         info: {
             active: false,
             clubname: 'Loading...',
             leader: 'DJ Blyatman',
             loc: 'XMT roof-top',
-            description: clubinfo.defaultdes
-        }
+            description: clubinfo.defaultdes,
+            members: 8
+        },
+        join: {
+            allow: true,
+            loading: false
+        },
+        manage: false
     },
 
     /**
@@ -33,17 +34,49 @@ Page({
      */
     onLoad: function(options) {
         wx.showNavigationBarLoading();
-        if(options.id) {
-            wx.setNavigationBarTitle({
-                title: options.id,
-            })
-        }
         if(options.id && (options.id > 0)){
             var clubid = options.id;
-            this.setData({
-                "clubid": clubid,
-                'info.description': 'You accessed this club via a share, club id is: '+clubid
-            });
+            var self = this;
+            wx.request({
+                /*url: 'https://connect.shs.cn/mp?action=getClub&clubid='+clubid,*/
+                url: 'http://localhost/clubdetails.json',
+                data: {
+                    
+                },
+                header: {
+                    'content-type':'application/json'
+                },
+                success: function(res){
+                    if(res.statusCode == 200){
+                    let ret = res.data;
+                    self.setData({
+                        'icon': ret.icon,
+                        'images': ret.images,
+                        'info': ret.info
+                    });
+                    wx.hideNavigationBarLoading();
+                    } else {
+                        wx.navigateBack({
+                            delta: 1
+                        })
+                        wx.showToast({
+                            title: 'Unable to load club',
+                            mask: true,
+                            image: '/resources/iconno.png'
+                        })
+                    }
+                },
+                fail: function(){
+                    wx.navigateBack({
+                        delta: 1
+                    })
+                    wx.showToast({
+                        title: 'Unable to load club',
+                        mask: true,
+                        image: '/resources/iconno.png'
+                    })
+                }
+            })
         } else if(options.id == -1){
             wx.showModal({
                 title: 'You are happy',
@@ -62,6 +95,7 @@ Page({
             })
         }
     },
+
     onShareAppMessage(property) {
         return {
             title: this.data.info.clubname,
@@ -71,9 +105,12 @@ Page({
     },
 
     joinClub: function() {
+        this.setData({
+            "join.loading": true,
+        })
     },
 
     manageClub: function() {
 
-    }
+    },
 })

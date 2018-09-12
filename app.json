@@ -5,7 +5,8 @@
         "pages/regs/regs",
         "pages/home/res/res",
         "pages/clubs/clubinfo/clubinfo",
-        "pages/clubs/clubinfo/activity/activity"
+        "pages/clubs/clubinfo/activity/activity",
+        "pages/clubs/clubinfo/members/members"
     ],
     "window": {
         "backgroundTextStyle": "light",

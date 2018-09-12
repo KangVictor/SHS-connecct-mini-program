@@ -1,0 +1,13 @@
+{
+    "clubid": -1,
+    "name": "SampleName",
+    "members": [
+        {
+            "grade": "11",
+            "class": "X",
+            "nickname": "nick",
+            "email": "email",
+            "passportname": "passportname"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<!--pages/clubs/clubinfo/members/members.wxml-->
+<view class='wrapper'>
+    <text class='title'>Members of {{clubname}}\n</text>
+    <text class='underconst'>this page is currently under construction\n</text>
+    <view wx:if='{{members}}'>
+        <text wx:for='{{members}}' wx:key='grade' class='member'>{{item.grade}}({{item.class}}), {{item.nickname}}\n</text>
+    </view>
+    <view wx:else class='member'>No members to list</view>
+</view>

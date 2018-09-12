@@ -24,6 +24,7 @@
     top: -60rpx;
     left: 10%;
     border-radius: 50%;
+    background: #eee;
     box-shadow: 4rpx 4rpx 20rpx #555;
 }
 .clubname{
@@ -76,7 +77,7 @@
     color: #b22;
 }
 
-.navtab {
-    margin: 0px 40rpx 6rpx 40rpx;
+.navtab::before{
+    margin: 0px 40rpx 0px 40rpx;
     width: auto;
 }
