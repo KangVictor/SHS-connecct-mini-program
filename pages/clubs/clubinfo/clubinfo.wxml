@@ -4,7 +4,7 @@
     <view>
         <swiper class='banner' circular='true' autoplay='true'>
             <swiper-item wx:for="{{images}}">
-                <image mode='aspectFill' class='banner-image' src='{{item}}' />
+                <image bindtap='imgpreview' mode='aspectFill' class='banner-image' src='{{item}}' />
             </swiper-item>
         </swiper>
         <view class='content'>

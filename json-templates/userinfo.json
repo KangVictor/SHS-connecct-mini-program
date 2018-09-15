@@ -2,7 +2,8 @@
     "userid": -1,
     "realname": "realname",
     "nickname": "root",
-    "activenotifications": [
+    "CASsum": 10,
+    "notifications": [
         {
             "clubname": "sampleclub(id or name)",
             "notifications": {
@@ -14,9 +15,8 @@
             "clubname2": "same"
         }
     ],
-    "myclubs": [
-        -1,
-        0,
-        1
-    ]
+    "myclubs": {
+        "part": 3,
+        "own": 1
+    }
 }

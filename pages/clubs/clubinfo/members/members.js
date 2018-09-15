@@ -1,4 +1,5 @@
 // pages/clubs/clubinfo/members/members.js
+var webreq = require('../../../webreqs.js');
 Page({
 
     /**
@@ -16,13 +17,10 @@ Page({
     onLoad: function(options) {
         if (options.id) {
             var self = this;
-            wx.request({
-                url: 'http://localhost/members.json',
-
-                success: function(res){
-                    self.setData(res.data);
-                }
-            })
+            var url = 'http://localhost/members.json';
+            webreq.getJSONReqret(url, function(res) {
+                self.setData(res);
+            }, 1);
         }
     },
 

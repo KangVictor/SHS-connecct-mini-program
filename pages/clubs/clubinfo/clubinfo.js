@@ -1,4 +1,6 @@
 // pages/clubs/clubinfo/clubinfo.js
+var webreq = require("../../webreqs.js");
+
 class clubinfo {
     static defaultdes = "Lorem ipsum...... The club and its contents are currently loading... please wait...";
 }
@@ -20,7 +22,7 @@ Page({
             leader: 'DJ Blyatman',
             loc: 'XMT roof-top',
             description: clubinfo.defaultdes,
-            members: 8
+            members: -1
         },
         join: {
             allow: true,
@@ -34,50 +36,19 @@ Page({
      */
     onLoad: function(options) {
         wx.showNavigationBarLoading();
-        if(options.id && (options.id > 0)){
+        if (options.id && (options.id > 0)) {
             var clubid = options.id;
             var self = this;
-            wx.request({
-                /*url: 'https://connect.shs.cn/mp?action=getClub&clubid='+clubid,*/
-                url: 'http://localhost/clubdetails.json',
-                data: {
-                    
-                },
-                header: {
-                    'content-type':'application/json'
-                },
-                success: function(res){
-                    if(res.statusCode == 200){
-                    let ret = res.data;
-                    self.setData({
-                        'icon': ret.icon,
-                        'images': ret.images,
-                        'info': ret.info
-                    });
+            var url = 'http://localhost/clubdetails.json'
+            webreq.getJSONReqret(url,
+                function(data) {
                     wx.hideNavigationBarLoading();
-                    } else {
-                        wx.navigateBack({
-                            delta: 1
-                        })
-                        wx.showToast({
-                            title: 'Unable to load club',
-                            mask: true,
-                            image: '/resources/iconno.png'
-                        })
-                    }
-                },
-                fail: function(){
-                    wx.navigateBack({
-                        delta: 1
-                    })
-                    wx.showToast({
-                        title: 'Unable to load club',
-                        mask: true,
-                        image: '/resources/iconno.png'
-                    })
-                }
-            })
-        } else if(options.id == -1){
+                    //if (clubid == data.clubid){
+                    self.setData(data);
+                    //}
+                }, 1
+            )
+        } else if (options.id == -1) {
             wx.showModal({
                 title: 'You are happy',
                 content: 'yes indeed you are very gay',
@@ -86,8 +57,9 @@ Page({
             wx.showModal({
                 title: 'Unknown Club',
                 content: 'You find yourself lost in the puzzle of clubs. Quivering, you took a step back',
+                confirmText: 'OK',
                 showCancel: false,
-                complete: function(res){
+                complete: function(res) {
                     wx.navigateBack({
                         delta: 1
                     })
@@ -99,9 +71,17 @@ Page({
     onShareAppMessage(property) {
         return {
             title: this.data.info.clubname,
-            path: 'pages/home/home?clubid='+this.data.clubid,
+            path: 'pages/home/home?clubid=' + this.data.clubid,
             imageUrl: this.data.icon
         }
+    },
+
+    imgpreview: function(e){
+        var src = e.currentTarget.src;
+        wx.previewImage({
+            urls: this.data.images,
+            current: src
+        })
     },
 
     joinClub: function() {

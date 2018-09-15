@@ -1,5 +1,6 @@
 {
     "navigationBarTitleText": "Club Info",
+    "allowPullDownRefresh": true,
     "usingComponents": {
         "navtab": "/pages/navtab/navtab"
     }

@@ -5,7 +5,29 @@ Page({
      * 页面的初始数据
      */
     data: {
+        'logged': false,
 
+        "userid": -1,
+        "realname": "realname",
+        "nickname": "NickName",
+        "CASsum": 10,
+        "avatar": "https://picsum.photos/80",
+        "notifications": [
+            {
+                "clubname": "sampleclub(id or name)",
+                "notifications": {
+                    "content": "notif",
+                    "time": "8012"
+                }
+            },
+            {
+                "clubname2": "same"
+            }
+        ],
+        "myclubs": {
+            "part": 3,
+            "own": 1
+        }
     },
 
     /**
@@ -19,12 +41,6 @@ Page({
                 })
             }, 800)
         }
-    },
-
-    openhelp: function() {
-        wx.navigateTo({
-            url: 'res/res',
-        })
     },
 
     /**
@@ -74,5 +90,11 @@ Page({
      */
     onShareAppMessage: function() {
 
+    },
+
+    viewavatar: function(e){
+        wx.previewImage({
+            urls: [this.data.avatar]
+        })
     }
 })
