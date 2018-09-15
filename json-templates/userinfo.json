@@ -1,0 +1,22 @@
+{
+    "userid": -1,
+    "realname": "realname",
+    "nickname": "root",
+    "CASsum": 10,
+    "notifications": [
+        {
+            "clubname": "sampleclub(id or name)",
+            "notifications": {
+                "content": "notif",
+                "time": "8012"
+            }
+        },
+        {
+            "clubname2": "same"
+        }
+    ],
+    "myclubs": {
+        "part": 3,
+        "own": 1
+    }
+}

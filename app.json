@@ -3,13 +3,13 @@
         "pages/home/home",
         "pages/clubs/clubs",
         "pages/regs/regs",
-        "pages/clubs/clubinfo/clubinfo",
         "pages/home/res/res",
-        "pages/test"
+        "pages/clubs/clubinfo/clubinfo",
+        "pages/clubs/clubinfo/activity/activity",
+        "pages/clubs/clubinfo/members/members"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#2C2C2C",
         "navigationBarTitleText": "Connect",
         "navigationBarTextStyle": "White"
     },

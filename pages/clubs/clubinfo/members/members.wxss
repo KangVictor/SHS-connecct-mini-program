@@ -1,0 +1,22 @@
+/* pages/clubs/clubinfo/members/members.wxss */
+.wrapper {
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    margin-top: 20rpx;
+    width: auto;
+}
+
+.title {
+    font-size: 18pt;
+    color: #111;
+}
+
+.underconst {
+    font-size: 10pt;
+    color: #b2b2b2;
+}
+
+.members {
+    font-size: 17pt;
+    color: #353535
+}

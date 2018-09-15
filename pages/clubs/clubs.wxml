@@ -1,4 +1,4 @@
-<!--pages/clubs/clubs.wxml-->
+<!--pages/clubs/clubs.wxml
 <text>pages/clubs/clubs.wxml</text>
 <text>\n\n//TODO Clubs exploration page:
   - search page w/ filter (grade, type)
@@ -7,12 +7,62 @@
   - each club in small banner/card form (wide, short picture w/ or w/o name)
   - if club does not have banner use plain text instead
   - explore clubs, create and join
-    eg. put put an "+ new club" entry under my clubs</text>
+    eg. put put an "+ new club" entry under my clubs</text>-->
 <view>
-    <text>\n</text>
-    <button type='primary' plain='true' bindtap='newclubtap'>demo new club</button>
-    <text>Sample club card (for displaying clubs): </text>
-    <view style='margin: 10px 25px 0px 25px; height:100px; width:auto;'>
-         <clubcard/>
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="Club name" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm='inputFinish' />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">Search clubs</view>
+            </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
     </view>
+    <!--<view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+        <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+                <view>实时搜索文本</view>
+            </view>
+        </navigator>
+        <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+                <view>实时搜索文本</view>
+            </view>
+        </navigator>
+        <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+                <view>实时搜索文本</view>
+            </view>
+        </navigator>
+        <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+                <view>实时搜索文本</view>
+            </view>
+        </navigator>
+    </view>-->
+    <scroll-view> 
+    <view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
+        <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
+    </view>
+    <view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
+     <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
+</view>
+<view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
+     <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
+</view>
+<view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
+     <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
+</view>
+<view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
+     <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
+</view>
+    </scroll-view>
+   
 </view>

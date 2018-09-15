@@ -1,6 +1,6 @@
 <view style="width: {{width}}; height: {{height}}">
-    <navigator open-type='navigate' url="{{url}}" class='cardbase' hover-class='cardbase-hover'>
+    <navigator open-type='navigate' url="/pages/clubs/clubinfo/clubinfo?id={{cid}}" class='cardbase' hover-class='cardbase-hover'>
         <image class='backimage' src='{{imagesrc}}'/>
-        <text class='clubname' style="color: {{textcolor}}">example club</text>
+        <text class='clubname' style="color: {{textcolor}}">{{name}}</text>
     </navigator>
 </view>

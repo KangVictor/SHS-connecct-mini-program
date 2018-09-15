@@ -1,16 +1,38 @@
-<!--pages/home/home.wxml-->
-
-<text>pages/home/home.wxml</text>
-
-<text>\n Name:</text>
-<view> Your CAS HOUR is {{CAS_HOUR}}! </view>
-<view> {{NAME}} </view>
-<view> {{PHONE}} </view>
-
+<!--<text>pages/home/home.wxml</text>
 <text> \n\n//TODO Homepage:
   - my account (total CAS hrs, name, phone, avatar, my clubs, etc...)
   - featured/excellent clubs
 
   - clubs exist in card form (image with club name, tap to enter club page where more club info is showed)</text>
 
-<button type='primary' bindtap='openhelp'>UI Development Resources</button>
+<button style='margin: 30rpx 60rpx 0px 60rpx; width: auto;' type='primary' bindtap='openhelp'>UI Development Resources</button>-->
+<!--index.wxml-->
+<view class='bgimage' />
+<view class='header'>
+            <view class="welcome-text">Welcome!</view>
+            <view class="name-text">{{nickname}}</view>
+            <image class="avatar" src="{{avatar}}" bindtap='viewavatar' />
+        <!--
+        <block wx:if='{{!logged}}'>
+        </block>
+        <block wx:else>
+        <view>Hi, Please login</view>
+        </block>-->
+</view>
+<view class='info'>
+    <view class='CAS'>
+        <view class="title">CAS hours:</view>
+        <view class="number">{{CASsum}}</view>
+    </view>
+    <view class='clubs'>
+        <view class="title">Clubs:</view>
+        <view class='part'>
+            <text class="number">{{myclubs.part}}</text>
+            <text style='margin-top:20rpx;' class='desc'>Participating</text>
+        </view>
+        <view class='own'>
+            <text class="number">{{myclubs.own}}</text>
+            <text class="desc">Own</text>
+        </view>
+    </view>
+</view> //Notifications

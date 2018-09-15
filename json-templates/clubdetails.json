@@ -1,0 +1,17 @@
+{
+    "clubid": -1,
+    "icon": "iconurl",
+    "images": [
+        "imgurl1",
+        "imgurl2"
+    ],
+    "info": {
+        "active": false,
+        "clubname": "name",
+        "leader": "12(7), DJ Blyatman",
+        "loc": null,
+        "description": "advanceddesc",
+        "members": 8
+    },
+    "activities": "empty right now"
+}

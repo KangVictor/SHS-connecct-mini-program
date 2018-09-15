@@ -1,3 +1,7 @@
 {
-    "navigationBarTitleText": ">insert_club_name_here<"
+    "navigationBarTitleText": "Club Info",
+    "allowPullDownRefresh": true,
+    "usingComponents": {
+        "navtab": "/pages/navtab/navtab"
+    }
 }

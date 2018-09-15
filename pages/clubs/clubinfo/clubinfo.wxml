@@ -1,16 +1,63 @@
 <!--pages/clubs/clubinfo/clubinfo.wxml-->
-<text>pages/clubs/clubinfo/clubinfo.wxml</text>
-<text>\n\n //TODO each club will have a page that looks something like this
+<!--<text>pages/clubs/clubinfo/clubinfo.wxml</text>-->
+<view class='wrapper'>
+    <view>
+        <swiper class='banner' circular='true' autoplay='true'>
+            <swiper-item wx:for="{{images}}">
+                <image bindtap='imgpreview' mode='aspectFill' class='banner-image' src='{{item}}' />
+            </swiper-item>
+        </swiper>
+        <view class='content'>
+            <image class='icon' src='{{icon}}' />
+            <!--Club Actions-->
+            <view>
+                <view class='clubname'>{{info.clubname}}</view>
+                <button wx:if='{{!info.active}}' type='default' class='extraoptsbtn' disabled='true'>Inactive</button>
+                <button wx:elif='{{join.allow}}' type='primary' plain='true' class='extraoptsbtn' loading='{{join.loading}}' bindtap='joinclub'>Join</button>
+                <button wx:elif='{{manage}}' type='primary' plain='true' class='extraoptsbtn' bindtap='manageclub'>Manage</button>
+            </view>
+
+            <view class='hr' />
+
+            <view class='info'>
+                <text class='key'>Status: </text>
+                <text wx:if='{{info.active}}' class='active'>Active</text>
+                <text wx:else class='inactive'>Inactive</text>
+                <text>\n</text>
+                <text class='key'>Leader:  </text>
+                <text class='value'>{{info.leader}}\n</text>
+                <view wx:if='{{info.loc}}'>
+                    <text class='key'>Location:  </text>
+                    <text class='value'>{{info.loc}}</text>
+                </view>
+            </view>
+
+            <view class='hr' />
+
+            <view class='description'>
+                <text>{{info.description}}</text>
+            </view>
+
+            <navtab class='navtab' text='Activities' url='activity/activity?id={{clubid}}'/>
+            <navtab class='navtab' hidetop='true' text='Members'  url='members/members?id={{clubid}}' subtitle='{{info.members}}'  />
+        </view>
+    </view>
+</view>
+
+
+
+<!--
+//TODO each club will have a page that looks something like this
 
 what to display:
-  - club names
-  - contact info
+  - #club names
+  - #contact info
   - member count (tap to view members)
   - activities
-  - if not joined then join button
+  - #if not joined then join button
 
 for club leaders(//TODO &admins):
   - set club as inactive
   - remove member
   - club profile edit (change leader, manage members)
-  - (club join requests)</text>
+  - (club join requests)-->

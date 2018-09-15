@@ -1,41 +1,83 @@
 /* pages/clubs/clubs.wxss */
-.navigator {
-  padding: 20rpx 30rpx;
-  position: relative;
-  display: flex;
-  align-items: center;
+.weui-search-bar {
+    position: relative;
+    padding: 8px 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #efeff4;
+    border-top: 1rpx solid #d7d6dc;
+    border-bottom: 1rpx solid #d7d6dc;
 }
-.navigator:before {
-  content: " ";
-  position: absolute;
-  left: 30rpx;
-  top: 0;
-  right: 30rpx;
-  height: 1px;
-  border-top: 1rpx solid #D8D8D8;
-  color: #D8D8D8;
+
+.weui-icon-search {
+    margin-right: 8px;
+    font-size: inherit;
 }
-.navigator:first-child:before {
-  display: none;
+
+.weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
 }
-.navigator-text {
-  flex: 1;
+
+.weui-search-bar__text {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
 }
-.navigator-arrow {
-  padding-right: 26rpx;
-  position: relative;
+
+.weui-search-bar__form {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    flex: auto;
+    border-radius: 5px;
+    background: #fff;
+    border: 1rpx solid #e6e6ea;
 }
-.navigator-arrow:after {
-  content: " ";
-  display: inline-block;
-  height: 18rpx;
-  width: 18rpx;
-  border-width: 2rpx 2rpx 0 0;
-  border-color: #888888;
-  border-style: solid;
-  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-  position: absolute;
-  top: 50%;
-  margin-top: -8rpx;
-  right: 28rpx;
+
+.weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.weui-search-bar__input {
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.weui-icon-clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 8px;
+    font-size: 0;
+}
+
+.weui-search-bar__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 3px;
+    text-align: center;
+    color: #9b9b9b;
+    background: #fff;
+    line-height: 28px;
+}
+
+.weui-search-bar__cancel-btn {
+    margin-left: 10px;
+    line-height: 28px;
+    color: #09bb07;
+    white-space: nowrap;
 }
