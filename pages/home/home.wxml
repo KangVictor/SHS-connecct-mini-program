@@ -9,30 +9,32 @@
 <!--index.wxml-->
 <view class='bgimage' />
 <view class='header'>
-            <view class="welcome-text">Welcome!</view>
-            <view class="name-text">{{nickname}}</view>
-            <image class="avatar" src="{{avatar}}" bindtap='viewavatar' />
-        <!--
+    <view class="welcome-text">Welcome!</view>
+    <view class="name-text">{{nickname}}</view>
+    <image class="avatar" src="{{avatar}}" bindtap='viewavatar' />
+    <!--
         <block wx:if='{{!logged}}'>
         </block>
         <block wx:else>
         <view>Hi, Please login</view>
         </block>-->
 </view>
-<view class='info'>
-    <view class='CAS'>
-        <view class="title">CAS hours:</view>
-        <view class="number">{{CASsum}}</view>
-    </view>
-    <view class='clubs'>
-        <view class="title">Clubs:</view>
-        <view class='part'>
-            <text class="number">{{myclubs.part}}</text>
-            <text style='margin-top:20rpx;' class='desc'>Participating</text>
+<scroll-view >
+    <view class='info'>
+        <view class='CAS'>
+            <view class="title">CAS hours:</view>
+            <view class="number">{{CASsum}}</view>
         </view>
-        <view class='own'>
-            <text class="number">{{myclubs.own}}</text>
-            <text class="desc">Own</text>
+        <view class='clubs'>
+            <view class="title">Clubs:</view>
+            <view class='part'>
+                <text class="number">{{myclubs.part}}</text>
+                <text style='margin-top:20rpx;' class='desc'>Participating</text>
+            </view>
+            <view class='own'>
+                <text class="number">{{myclubs.own}}</text>
+                <text class="desc">Own</text>
+            </view>
         </view>
-    </view>
-</view> //Notifications
+    </view> //Notifications
+</scroll-view>

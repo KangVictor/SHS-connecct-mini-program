@@ -50,4 +50,9 @@
     <view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
         <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
     </view>
+    <view class='loadwrap'>
+    <view wx:if='{{loadedall}}' class='load'>No more</view>
+    <view wx:elif='{{loadmore}}' class='loading'><image src='../../resources/iconloading.png' class='loading-icon'/>Loading</view>
+    <view wx:else class='load'>Pull up to load more</view>
+    </view>
 </view>

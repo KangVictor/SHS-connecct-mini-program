@@ -1,6 +1,7 @@
 {
     "navigationBarTitleText": "Clubs",
     "enablePullDownRefresh": true,
+    "onReachBottomDistance": 3,
     "usingComponents": {
         "clubcard": "clubcard/clubcard"
     }

@@ -1,4 +1,5 @@
 /* pages/clubs/clubs.wxss */
+
 .weui-search-bar {
     position: relative;
     padding: 8px 10px;
@@ -80,4 +81,42 @@
     line-height: 28px;
     color: #09bb07;
     white-space: nowrap;
+}
+
+.load {
+    padding-left: 10rpx;
+    text-align: center;
+}
+
+.loading {
+    padding: 10rpx;
+    text-align: center;
+}
+
+.loading-icon {
+    display: inline-block;
+    margin-right: 5rpx;
+    margin-top: -5rpx;
+    vertical-align: middle;
+    content: '';
+    width: 40rpx;
+    height: 40rpx;
+    background-size: contain;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.loading.complete:before {
+    display: none;
+}
+
+.loadwrap {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    color: #888;
+    font-size: 14pt;
 }

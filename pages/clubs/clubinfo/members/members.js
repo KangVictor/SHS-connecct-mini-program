@@ -7,7 +7,7 @@ Page({
      */
     data: {
         "clubid": 1,
-        "clubname": "Unknown Club",
+        "name": "Unknown Club",
         "members": null
     },
 

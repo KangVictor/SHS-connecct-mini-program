@@ -8,7 +8,12 @@ Page({
     data: {
         inputShowed: false,
         inputVal: "",
-        'clubs': [{
+
+        loadmore: false,
+        loadedall: false,
+        currentpage: 0,
+
+        clubs: [{
             "clubid": 0,
             "logo": "/resources/clubdefault.png",
             "name": "Load Error",
@@ -22,47 +27,46 @@ Page({
         var self = this;
         var url = 'http://localhost/cq.json';
         webreqs.getJSONReqdef(url, data => {
-            this.setData({'clubs': data.clubs});
+            this.setData({
+                'clubs': data.clubs
+            });
         })
     },
 
 
-    showInput: function () {
+    showInput: function() {
         this.setData({
             inputShowed: true
         });
     },
-    hideInput: function () {
+    hideInput: function() {
         this.setData({
             inputVal: "",
             inputShowed: false
         });
     },
-    clearInput: function () {
+    clearInput: function() {
         this.setData({
             inputVal: ""
         });
     },
-    inputTyping: function (e) {
+    inputTyping: function(e) {
         this.setData({
             inputVal: e.detail.value
         });
     },
 
-    inputFinish: function (e){
+    inputFinish: function(e) {
         var url = 'http://localhost/cq.json';
         wx.showLoading({
             title: 'searching',
         })
-        webreqs.getJSONReqfail(url, data => {
-            this.setData({ 'clubs': data.clubs });
-            wx.hideLoading();
-        }, () => {
-            wx.showToast({
-                title: 'Loading failed',
-                icon: 'fail'
-            })
+        webreqs.getJSONReqdef(url, data => {
+            this.setData({
+                'clubs': data.clubs
+            });
         })
+        wx.hideLoading();
     },
 
     /**
@@ -70,8 +74,9 @@ Page({
      */
     onPullDownRefresh: function() {
         var url = 'http://localhost/cq.json';
-        webreqs.getJSONReqdef(url, data => {
-            this.setData({ 'clubs': data.clubs });
+        var self = this;
+        webreqs.getJSONReqdef(url, d => {
+            this.setData(d);
         })
     },
 
@@ -79,18 +84,29 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-        wx.showToast({
-            title: 'hi',
-        })
-        var url = 'http://localhost/cq.json';
-        webreqs.getJSONReqdef(url, data => {
-            for(var club in data.clubs){
-                this.data.clubs.push(club);
-            }
+        if (this.data.currentpage < 3) {
             this.setData({
-                'clubs': this.data.clubs
+                loadmore: true,
+                currentpage: this.data.currentpage + 1
             });
-        })
+            var url = 'http://localhost/cq.json';
+            webreqs.getJSONReqdef(url, d => {
+                for (var i = 0; i < d.clubs.length; i++) {
+                    this.data.clubs.push(d.clubs[i]);
+                }
+                this.setData({
+                    clubs: this.data.clubs
+                });
+            });
+            this.setData({
+                loadmore: false
+            });
+        } else {
+            this.setData({
+                loadmore: false,
+                loadedall: true
+            });
+        }
     },
 
     /**
