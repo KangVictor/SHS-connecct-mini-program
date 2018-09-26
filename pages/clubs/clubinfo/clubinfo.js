@@ -12,10 +12,8 @@ Page({
      */
     data: {
         clubid: -1,
-        icon: '/resources/clubdefault.png',
-        images: [
-            '/resources/clubdefault.png'
-        ],
+        icon: '/static/images/icons/icon101.jpg',
+        images: [],
         info: {
             active: false,
             clubname: 'Loading...',
@@ -25,7 +23,7 @@ Page({
             members: -1
         },
         join: {
-            allow: true,
+            allow: false,
             loading: false
         },
         manage: false
@@ -39,13 +37,19 @@ Page({
         if (options.id && (options.id > 0)) {
             var clubid = options.id;
             var self = this;
-            var url = 'http://localhost/clubdetails.json'
+            var url = 'https://connect.shs.cn/mp?action=getClubDetail&clubid=' + clubid;
             webreq.getJSONReqret(url,
                 function(data) {
                     wx.hideNavigationBarLoading();
-                    //if (clubid == data.clubid){
-                    self.setData(data);
-                    //}
+                    if (clubid == data.clubid) {
+                        self.setData(data);
+                    } else {
+                        wx.showModal({
+                            title: 'Error',
+                            content: 'An error has occured while retrieving information, please refresh the page',
+                            showCancel: false
+                        })
+                    }
                 }, 1
             )
         } else if (options.id == -1) {
@@ -76,7 +80,7 @@ Page({
         }
     },
 
-    imgpreview: function(e){
+    imgpreview: function(e) {
         var src = e.currentTarget.src;
         wx.previewImage({
             urls: this.data.images,

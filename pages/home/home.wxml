@@ -7,19 +7,20 @@
 
 <button style='margin: 30rpx 60rpx 0px 60rpx; width: auto;' type='primary' bindtap='openhelp'>UI Development Resources</button>-->
 <!--index.wxml-->
-<view class='bgimage' />
-<view class='header'>
-    <view class="welcome-text">Welcome!</view>
-    <view class="name-text">{{nickname}}</view>
-    <image class="avatar" src="{{avatar}}" bindtap='viewavatar' />
-    <!--
+<view class='contents'>
+    <view class='bgimage' />
+    <view class='header'>
+        <view class="welcome-text">Welcome!</view>
+        <view class="name-text">{{nickname}}</view>
+        <image class="avatar" src="{{avatar}}" bindtap='viewavatar' />
+        <view class='logout' bindtap='logout'>Log out</view>
+        <!--
         <block wx:if='{{!logged}}'>
         </block>
         <block wx:else>
         <view>Hi, Please login</view>
         </block>-->
-</view>
-<scroll-view >
+    </view>
     <view class='info'>
         <view class='CAS'>
             <view class="title">CAS hours:</view>
@@ -36,5 +37,7 @@
                 <text class="desc">Own</text>
             </view>
         </view>
-    </view> //Notifications
-</scroll-view>
+    </view>
+    <view class='details'>
+    </view>
+</view>

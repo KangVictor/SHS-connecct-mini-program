@@ -48,7 +48,7 @@
         </navigator>
     </view>-->
     <view wx:for='{{clubs}}' style='margin: 30rpx 50rpx 0px 50rpx; height:200rpx; auto;'>
-        <clubcard cid='{{item.clubid}}' imagesrc='{{item.logo}}' name='{{item.name}}' />
+        <clubcard cid='{{item}}'/>
     </view>
     <view class='loadwrap'>
     <view wx:if='{{loadedall}}' class='load'>No more</view>

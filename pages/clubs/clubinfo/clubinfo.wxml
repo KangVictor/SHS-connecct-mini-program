@@ -4,11 +4,11 @@
     <view>
         <swiper class='banner' circular='true' autoplay='true'>
             <swiper-item wx:for="{{images}}">
-                <image bindtap='imgpreview' mode='aspectFill' class='banner-image' src='{{item}}' />
+                <image bindtap='imgpreview' mode='aspectFill' class='banner-image' src='https://connect.shs.cn{{item}}' />
             </swiper-item>
         </swiper>
         <view class='content'>
-            <image class='icon' src='{{icon}}' />
+            <image class='icon' src='https://connect.shs.cn{{icon}}' />
             <!--Club Actions-->
             <view>
                 <view class='clubname'>{{info.clubname}}</view>

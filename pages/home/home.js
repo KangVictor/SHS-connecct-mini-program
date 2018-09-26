@@ -5,28 +5,28 @@ Page({
      * 页面的初始数据
      */
     data: {
-        'logged': false,
+        logged: true,
 
-        "userid": -1,
-        "realname": "realname",
-        "nickname": "NickName",
-        "CASsum": 10,
-        "avatar": "https://picsum.photos/80",
-        "notifications": [
+        userid: -1,
+        realname: "realname",
+        nickname: "NickName",
+        CASsum: 10,
+        avatar: "https://picsum.photos/80",
+        notifications: [
             {
-                "clubname": "sampleclub(id or name)",
-                "notifications": {
-                    "content": "notif",
-                    "time": "8012"
+                clubname: "sampleclub(id or name)",
+                notifications: {
+                    content: "notif",
+                    time: "8012"
                 }
             },
             {
-                "clubname2": "same"
+                clubname2: "same"
             }
         ],
-        "myclubs": {
-            "part": 3,
-            "own": 1
+        myclubs: {
+            part: 3,
+            own: 1
         }
     },
 
@@ -96,5 +96,25 @@ Page({
         wx.previewImage({
             urls: [this.data.avatar]
         })
+    },
+    logout: function () {
+        if(this.data.logged) {
+            wx.showModal({
+                title: 'Logout',
+                content: 'Are you sure?',
+                confirmText: 'Yes',
+                cancelText: 'No',
+                success: (res)=> {
+                    if(res.confirm)
+                    this.setData({logged:false});
+                }
+            })
+        } else {
+            wx.showModal({
+                title: 'Error',
+                content: 'You are not logged in',
+                showCancel: false
+            });
+        }
     }
 })

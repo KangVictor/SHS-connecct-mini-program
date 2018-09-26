@@ -1,0 +1,15 @@
+<!--pages/start/start.wxml-->
+<view class='wrapper'>
+    <view class='notif'>
+    </view>
+    <scroll-view class='content'>
+        <view class='login'>
+            <block wx:if='{{userid}}'>
+                <!--User info-->
+            </block>
+            <block wx:else>
+                <!--Please Login-->
+            </block>
+        </view>
+    </scroll-view>
+</view>
